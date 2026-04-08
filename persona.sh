@@ -70,16 +70,17 @@ show_persona() {
         exit 1
     fi
     
-    cat "$file" | jq -r '
+    ACTIVE="$(cat "$ACTIVE_PERSONA_FILE" 2>/dev/null)"
+    cat "$file" | jq -r --arg active "$ACTIVE" '
         "Name: \(.name)",
-        "Active: \(if env.ACTIVE == .name then "✓" else "" end)",
+        "Active: \(if $active == .name then "✓" else "" end)",
         "Tags: \(.tags | join(", ") // "none")",
         "Created: \(.created)",
         "Updated: \(.updated)",
         "",
         "Description:",
         "\(.description)"
-    ' ACTIVE="$(cat "$ACTIVE_PERSONA_FILE" 2>/dev/null)"
+    '
 }
 
 use_persona() {
