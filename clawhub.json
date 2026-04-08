@@ -1,0 +1,13 @@
+{
+  "name": "persona-manager",
+  "version": "1.0.0",
+  "description": "Manage user personas to help AI understand who you are. Supports single persona, multi-persona combinations, and auto-evolution.",
+  "tags": ["persona", "user-profile", "auto-evolution", "openclaw"],
+  "author": "wangwhy133",
+  "license": "MIT",
+  "homepage": "https://github.com/wangwhy133/persona-manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangwhy133/persona-manager.git"
+  }
+}

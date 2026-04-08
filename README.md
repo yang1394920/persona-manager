@@ -43,7 +43,7 @@
 ```bash
 # 克隆到 OpenClaw skills 目录
 cd ~/.openclaw/workspace/skills
-git clone https://github.com/yang1394920/persona-manager.git
+git clone https://github.com/wangwhy133/persona-manager.git
 
 # 初始化预设人设
 ./persona-manager/init-templates.sh
